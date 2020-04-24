@@ -23,7 +23,6 @@
     "bin": ["bin/upgrade-carbon"],
     "require": {
         "php": ">=5.3.9",
-        "kylekatarnls/update-helper": "^1.1",
         "symfony/translation": "~2.6 || ~3.0 || ~4.0"
     },
     "require-dev": {
@@ -52,12 +51,6 @@
         "phpunit": "phpunit --verbose --coverage-clover=coverage.xml",
         "phpcs": "php-cs-fixer fix -v --diff --dry-run",
         "phpstan": "phpstan analyse --configuration phpstan.neon --level 3 src tests",
-        "post-autoload-dump": [
-            "UpdateHelper\\UpdateHelper::check"
-        ],
-        "upgrade-carbon": [
-            "Carbon\\Upgrade::upgrade"
-        ]
     },
     "extra": {
         "update-helper": "Carbon\\Upgrade",
